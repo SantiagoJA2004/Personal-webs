@@ -1,0 +1,435 @@
+@import url(https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
+
+/*-------------ROOT VARIABLES-------------*/
+:root{
+    --color-primary: #FF7C07;
+    --color-secundary: #cc6a1f;
+    --color-danger: #ff7782;
+    --color-success: #096c4b;
+    --color-warning: #ffbb55; 
+    --color-white: #fff;
+    --color-info-dark: #57616b;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(0, 0, 0, 0.2); 
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #ffff;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+    
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    }
+
+/* ----------- DARK THEME VARIABLES -------------------------*/
+.dark-theme-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --color-shadow: 0 2rem 3rem var(--color-light);
+    }
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-background);
+}
+.container{
+    display: grid;
+    width: 99%;
+    margin: 0 auto;
+    gap: 1.4rem;
+    grid-template-columns: 14rem auto;
+}
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+} 
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+font-size: 1.4rem;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+h4{
+font-size: 0.8rem;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+
+}
+.primary{
+    color: var(--color-primary);
+}
+
+.secundary{
+    color: var(--color-secundary);
+}
+.danger{
+    color: var(--color-danger);
+}
+.success{
+    color: var(--color-success);
+}
+.warning{
+    color: var(--color-warning);
+}
+
+aside{
+    height: 100vh;
+    width: 15rem;
+    text-align: center;
+}
+
+
+aside .top{
+    background-image: url("img/background-img.avif");
+    border-radius: var(--border-radius-1);
+    background-size: 100% 100%;
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+    /* box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2); */
+    box-shadow: var(--box-shadow);
+    
+}
+
+aside .logo{
+    display: flex;
+    gap: 0.9rem; 
+}
+
+aside .logo img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--border-radius-3);
+}
+
+
+/*------------------------- side bar ------------------ */
+
+.top{
+    display: flex;
+    grid-template-columns: space-between;
+    height: 80px;
+}
+
+aside .sidebar{
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 1.4rem;
+}
+
+aside h3{
+    font-weight: 600;
+}
+
+aside .sidebar a{
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300rem ease;
+
+    border-style: ridge;
+    border-left: none;
+    border-top: none;
+    border-width: 3px;
+    border-color: var(--color-info-dark);
+    border-radius: var(--border-radius-1);
+}
+
+aside .sidebar a span{
+    font-size: 1.4rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a:hover{
+    color: var(--color-success);
+    border-radius: 0;
+    border: none;
+    border-left: 6px solid var(--color-success) ;
+}
+
+aside .sidebar a:hover span{ 
+    margin-left: 1rem;
+}
+
+
+ /* -------------------------MAIN------------------------- */
+main{
+    margin-top: 1.4rem;
+}
+main .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 2;
+    background-color: var(--color-primary);
+}
+main h2, h4{
+    color: var(--color-info-dark);
+}
+
+main .top .Udlap_logo{
+    width: 15rem;
+}
+main .anuncio{
+    text-align: center;
+    background-color: var(--color-secundary);
+}
+
+main .top .menu-btn{
+    display: none;
+ }
+main .top :last-child{  /*theme button */
+    color: var(--color-background);
+    background-color: var(--color-primary);
+    justify-content: right;
+    align-items: center;
+    margin-right: 1.8rem;
+    font-size: 37px;
+ }
+
+ aside .sidebar a.active{
+    background: var(color --color-light);
+    color: var(--color-success);
+    margin-left: 0;
+}
+
+aside .sidebar a.active:before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: var(--color-success);
+}
+
+
+/* ----------------------END OF MAIN --------------------------- */
+
+
+
+
+
+/* ======================= MEDIA QUERIES ======================= */
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 7rem auto;
+        padding: 0;
+    }
+
+    aside .top{
+        margin-top: 0.2rem;
+        max-width: 131px;
+    }
+
+    /* Ocultar el nombre en el logo */
+    aside .logo h3 {
+        display: inline;
+        font-size: 12px;
+    }
+
+    /* Ocultar textos en la barra lateral */
+    aside .sidebar h3 {
+        display: none;
+    }
+
+    /* Reducir tamaño de los botones en la barra lateral */
+    aside .sidebar a {
+        width: 6rem;
+        justify-content: center;
+    }
+
+    aside .sidebar a span {
+        font-size: 1.8rem;
+    }
+
+    aside .sidebar a:last-child {
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    aside .sidebar a:last-child:hover {
+        color: var(--color-danger);
+        border: none;
+    }
+
+    /* -------------Ajustes en el main----------- */
+    main {
+        margin-top: 0.2rem;
+        padding: 0;
+    }
+
+    main .top {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    /* Ajustes para avisos */
+    main .anuncio {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    /* Ajustes en imágenes */
+    .Udlap_logo img {
+        width: 12rem;
+    }
+}
+
+
+/* ======================= MEDIA QUERIES 2 ======================= */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Ocultar el menú lateral y hacerlo desplegable */
+    aside {
+        position: fixed;
+        left: -100%;
+        background: var(--color-white);
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        display: none;
+        animation: showMenu 400ms ease forwards;
+    }
+
+    @keyframes showMenu {
+        to {
+            left: 0;
+        }
+    }
+    aside .top {
+        margin: 0;
+    }
+
+    /* Ajustes en aside */ 
+    aside .logo {
+        margin-left: 4rem;
+    }
+
+    aside .logo h3 {
+        display: inline;
+    }
+
+    /* Mostrar los textos del sidebar */
+    aside .sidebar h3 {
+        display: inline;
+    }
+
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .sidebar a span {
+        font-size: 1.6rem;
+    }
+
+
+    /* Ajustes en el main */
+    main {
+        margin-top: 0;
+    }
+    main .top .Udlap_logo{
+        margin-left: 4rem;
+        margin-top: 1rem;
+    }
+
+    /* Botón de menú en la parte superior */
+    main .top .menu-btn{
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-background);
+        position: absolute;
+        left: 1rem;
+        font-size: 4rem;
+        
+    }
+    /* Botón menu theme */
+    main .top .menu-theme{
+        margin-right: 0;
+    }
+
+    main .top button span{
+        font-size: 2rem;
+    }
+
+    main .anuncio {
+        font-size: 1.4rem;
+    }
+}
